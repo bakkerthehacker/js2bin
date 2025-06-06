@@ -201,6 +201,8 @@ class NodeJsBuilder {
     await patchFile(this.nodeSrcDir, join(this.patchDir, 'run_third_party_main.js.patch'));
     await patchFile(this.nodeSrcDir, join(this.patchDir, 'node.cc.patch'));
     await patchFile(this.nodeSrcDir, join(this.patchDir, 'fs-event.c.patch'));
+    await patchFile(this.nodeSrcDir, join(this.patchDir, 'bisect-v8.patch'));
+    await patchFile(this.nodeSrcDir, join(this.patchDir, 'bisect-v8-node.patch'));
   }
 
   async patchNodeCompileIssues() {
